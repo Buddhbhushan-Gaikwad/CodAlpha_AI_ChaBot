@@ -19,7 +19,7 @@ public class ChatController {
     @MessageMapping("/sendMessage")
     @SendTo("/topic/public") // broadcast bot reply
     public Message processMessage(Message message) {
-        String answer = chat.reply(message.getContent());
+        String answer = chat.handleMessage(message.getContent()).getReply(); // use NLP service
         return new Message("ChatBot", answer, "CHAT");
     }
 }
