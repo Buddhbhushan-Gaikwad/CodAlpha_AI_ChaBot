@@ -14,7 +14,7 @@ public class ChatService {
 
     public String reply(String rawQuestion) {
         if (rawQuestion == null || rawQuestion.isBlank()) {
-            return "Please ask a valid question.";
+            return "Please ask a valid question..!";
         }
 
         // fallback → AI answer
